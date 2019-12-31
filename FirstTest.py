@@ -13,14 +13,11 @@ assert driver.title == 'My Store', ErrMsg
 driver.refresh()
 #driver.get_screenshot_as_file('./screenshots/scr01.png')
 
-tshirts_btn = driver.find_element_by_link_text('T-shirts')
 bestsellers_btn = driver.find_element_by_xpath("//a[contains(@class, 'blockbestsellers')]")
 
-assert tshirts_btn.is_displayed()
 assert bestsellers_btn.is_displayed()
 
 wait = WebDriverWait(driver, 10)
-#bestsellers_btn = wait.until(EC.element_to_be_clickable(By.ID, 'Some ID'))
 
 
 driver.quit()
