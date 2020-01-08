@@ -1,6 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+#from selenium.webdriver.support import expected_conditions as EC
+#import pytest
+
 
 driver = webdriver.Opera(executable_path="/Users/Ms/Selenium webdriver driver/operadriver")
 driver.get("http://automationpractice.com/index.php")
@@ -18,7 +20,7 @@ bestsellers_btn = driver.find_element_by_xpath("//a[contains(@class, 'blockbests
 assert bestsellers_btn.is_displayed()
 
 wait = WebDriverWait(driver, 10)
-
-
+ 
 driver.quit()
 
+print("Test completed")
